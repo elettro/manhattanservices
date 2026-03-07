@@ -666,9 +666,7 @@ section {
 
   .site-header.mobile-nav-collapsed .nav-toggle {
     display: inline-flex;
-    position: fixed;
-    top: 12px;
-    right: 12px;
+    position: static;
     z-index: 260;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
   }
@@ -679,10 +677,10 @@ section {
 
   .site-header.mobile-nav-collapsed.menu-open .main-nav {
     display: flex;
-    position: fixed;
-    top: 64px;
-    left: 12px;
-    right: 12px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
     width: auto;
     flex-direction: column;
     align-items: stretch;
@@ -784,6 +782,10 @@ section {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 28px;
   align-items: stretch;
+}
+
+.contact-hero-wrap {
+  grid-template-columns: 0.82fr 1.18fr;
 }
 
 .page-hero-copy,
