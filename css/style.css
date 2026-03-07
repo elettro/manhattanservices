@@ -820,3 +820,50 @@ section {
     grid-column: auto;
   }
 }
+
+
+
+
+
+.provider-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.provider-block strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.provider-links {
+  list-style: disc;
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.provider-links li {
+  color: var(--text);
+}
+
+.provider-links li a {
+  display: inline;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-weight: 600;
+  color: #0b57d0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.provider-links li a:hover,
+.provider-links li a:focus {
+  color: #0842a0;
+  transform: none;
+}
