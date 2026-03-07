@@ -825,7 +825,7 @@ section {
 
 .page-hero-wrap {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.72fr 1.28fr;
   gap: 28px;
   align-items: stretch;
 }
@@ -976,6 +976,12 @@ section {
 .service-card p {
   margin: 0;
   color: var(--muted);
+}
+
+@media (min-width: 1101px) {
+  .page-hero-panel .hero-carousel {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
