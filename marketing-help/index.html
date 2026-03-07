@@ -139,6 +139,28 @@
 
         <div class="page-hero-panel">
           <h3>What we help with</h3>
+          <div class="hero-carousel" data-carousel aria-label="Marketing help highlights">
+            <div class="hero-carousel-track">
+            <figure class="hero-slide is-active" data-slide-index="0">
+              <img src="https://source.unsplash.com/1200x700/?manhattan,office,marketing" alt="Manhattan team planning a marketing campaign" loading="lazy" />
+            </figure>
+            <figure class="hero-slide" data-slide-index="1">
+              <img src="https://source.unsplash.com/1200x700/?new-york,website,design" alt="Website strategy and design work in NYC office" loading="lazy" />
+            </figure>
+            <figure class="hero-slide" data-slide-index="2">
+              <img src="https://source.unsplash.com/1200x700/?times-square,advertising" alt="Digital advertising scene in Times Square" loading="lazy" />
+            </figure>
+            </div>
+            <div class="hero-carousel-controls">
+              <button type="button" class="hero-carousel-btn" data-carousel-prev aria-label="Previous slide">&#8592;</button>
+              <div class="hero-carousel-dots">
+              <button type="button" class="hero-carousel-dot is-active" data-carousel-dot="0" aria-label="Go to slide 1"></button>
+              <button type="button" class="hero-carousel-dot" data-carousel-dot="1" aria-label="Go to slide 2"></button>
+              <button type="button" class="hero-carousel-dot" data-carousel-dot="2" aria-label="Go to slide 3"></button>
+              </div>
+              <button type="button" class="hero-carousel-btn" data-carousel-next aria-label="Next slide">&#8594;</button>
+            </div>
+          </div>
           <div class="icon-check-list">
             <div><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V4l8 3 8-3v16l-8 3z" /></svg></span><span>Branding</span></div>
             <div><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zM8 19h8" /></svg></span><span>Website Design</span></div>
@@ -388,5 +410,6 @@
   </footer>
 
   <script src="../js/header-menu.js" defer></script>
+  <script src="../js/hero-carousel.js" defer></script>
 </body>
 </html>
