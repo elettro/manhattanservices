@@ -672,6 +672,11 @@ section {
   padding: 36px;
 }
 
+.page-hero-copy h1 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .page-lead {
   margin: 0 0 24px;
   color: var(--muted);
