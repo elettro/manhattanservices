@@ -621,7 +621,6 @@ section {
 
 @media (max-width: 900px) {
   .site-header {
-    position: static;
     backdrop-filter: none;
   }
 
