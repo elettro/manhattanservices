@@ -273,6 +273,18 @@ h3 {
   margin-bottom: 8px;
 }
 
+
+.mini-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.mini-card-title strong {
+  margin-bottom: 0;
+}
+
 .side-cta {
   background: #111111;
   color: #fff;
