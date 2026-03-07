@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ManhattanServices.com | Find Useful Services in Manhattan</title>
+  <meta
+    name="description"
+    content="Find useful apartment services, pet care, city help, and marketing support for Manhattan businesses at ManhattanServices.com."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --surface: #ffffff;
+      --surface-soft: #f2efe6;
+      --text: #121212;
+      --muted: #5e5b53;
+      --line: #ddd6c8;
+      --accent: #111111;
+      --accent-soft: #d7c28a;
+      --gold: #c8a85d;
+      --max: 1240px;
+      --radius: 22px;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(247, 245, 239, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 82px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #111111, #3a372f);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .main-nav a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.96rem;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: var(--text);
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.96rem;
+      letter-spacing: -0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-1px);
+    }
+
+    .btn-dark {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(17, 17, 17, 0.18);
+    }
+
+    .btn-light {
+      background: transparent;
+      color: var(--text);
+      border-color: rgba(18, 18, 18, 0.16);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+      box-shadow: 0 10px 30px rgba(200, 168, 93, 0.24);
+    }
+
+    .hero {
+      padding: 82px 0 34px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .hero-side {
+      border-radius: calc(var(--radius) + 8px);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(135deg, rgba(18, 18, 18, 0.82), rgba(18, 18, 18, 0.55)),
+        url("https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1400&q=80") center center / cover no-repeat;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-content {
+      padding: 56px;
+      color: #fff;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 16px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3rem, 5.2vw, 5.3rem);
+      max-width: 12ch;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.15rem, 3.6vw, 3.4rem);
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 58ch;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero-note {
+      font-size: 0.96rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-side {
+      background: linear-gradient(180deg, #f2ecdf, #ffffff);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: space-between;
+      min-height: 600px;
+    }
+
+    .service-mini-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(18, 18, 18, 0.08);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .side-cta {
+      background: #111111;
+      color: #fff;
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .side-cta h3 {
+      margin-bottom: 10px;
+    }
+
+    .side-cta p {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.97rem;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .intro-block {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .copy-card,
+    .stats-card,
+    .cta-band,
+    .feature-card,
+    .grid-card,
+    .business-block,
+    .final-cta {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(18, 18, 18, 0.05);
+    }
+
+    .copy-card,
+    .stats-card,
+    .business-block,
+    .final-cta {
+      padding: 34px;
+    }
+
+    .copy-card p,
+    .stats-card p,
+    .business-block p,
+    .feature-card p,
+    .grid-card p,
+    .final-cta p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .copy-card p + p,
+    .business-block p + p,
+    .final-cta p + p {
+      margin-top: 14px;
+    }
+
+    .stats-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .stat-item {
+      display: grid;
+      gap: 4px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .feature-card {
+      padding: 28px;
+    }
+
+    .feature-card p {
+      margin-bottom: 18px;
+    }
+
+    .feature-card .btn {
+      width: fit-content;
+    }
+
+    .cta-band {
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(17, 17, 17, 0.96), rgba(48, 42, 28, 0.96)),
+        linear-gradient(90deg, #111111, #3b3528);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-band p {
+      color: rgba(255, 255, 255, 0.84);
+      margin: 0;
+      max-width: 60ch;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-card {
+      padding: 28px;
+    }
+
+    .grid-card p {
+      margin-top: 8px;
+    }
+
+    .needs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .need-item {
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 16px;
+      font-weight: 700;
+      font-size: 0.97rem;
+      letter-spacing: -0.02em;
+    }
+
+    .business-block {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .business-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .business-list span {
+      display: block;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .final-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .final-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+    }
+
+    .final-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .final-box p {
+      margin-bottom: 18px;
+    }
+
+    .site-footer {
+      padding: 26px 0 54px;
+    }
+
+    .footer-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(18, 18, 18, 0.1);
+    }
+
+    .footer-copy strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .footer-copy p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: var(--text);
+    }
+
+    .section-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 8px;
+    }
+
+    .section-top p {
+      max-width: 56ch;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-wrap,
+      .intro-block,
+      .business-block,
+      .cta-band,
+      .final-cta {
+        grid-template-columns: 1fr;
+      }
+
+      .cards-grid,
+      .three-col {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .needs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header-inner {
+        min-height: auto;
+        padding: 14px 0;
+        flex-wrap: wrap;
+      }
+
+      .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 4px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 24px), var(--max));
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-card,
+      .hero-side {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 32px 24px;
+      }
+
+      .hero-side,
+      .copy-card,
+      .stats-card,
+      .feature-card,
+      .grid-card,
+      .business-block,
+      .final-cta,
+      .final-box,
+      .cta-band {
+        padding: 24px;
+      }
+
+      .cards-grid,
+      .three-col,
+      .needs-grid,
+      .business-list {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .hero-actions,
+      .header-cta {
+        width: 100%;
+      }
+
+      .hero-actions .btn,
+      .header-cta .btn,
+      .feature-card .btn,
+      .cta-band .btn,
+      .final-box .btn {
+        width: 100%;
+      }
+
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ManhattanServices.com home">
+        <span class="brand-mark">MS</span>
+        <span>ManhattanServices.com</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Apartment Services</a>
+        <a href="#pets">Pet Services</a>
+        <a href="#city-help">City Help</a>
+        <a href="https://Elettro.com" target="_blank" rel="noopener noreferrer">Marketing Help</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-dark" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+          Get Marketing Help
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="home">
+      <div class="container hero-wrap">
+        <div class="hero-card">
+          <div class="hero-content">
+            <span class="eyebrow">Useful services for life in Manhattan</span>
+            <h1>Find the services Manhattan people need most.</h1>
+            <p>
+              Apartment help, pet care, city issue guidance, and marketing support for Manhattan
+              businesses. One clean local starting point.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="#services">Explore Services</a>
+              <a class="btn btn-light" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+                Get Marketing Help
+              </a>
+            </div>
+
+            <div class="hero-note">
+              Built for Manhattan residents, renters, pet owners, and local businesses.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="Popular Manhattan service categories">
+          <div>
+            <h3>Popular service categories</h3>
+            <div class="service-mini-grid">
+              <div class="mini-card">
+                <strong>Apartment Services</strong>
+                <p>Cleaning, moving help, furniture assembly, handyman work, mounting, and repairs.</p>
+              </div>
+              <div class="mini-card">
+                <strong>Pet Services</strong>
+                <p>Dog walking, pet sitting, check-ins, and practical help for busy city schedules.</p>
+              </div>
+              <div class="mini-card">
+                <strong>City Help</strong>
+                <p>Apartment issues, heat or hot water, noise problems, and local issue guidance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-cta">
+            <h3>Need help marketing your Manhattan business?</h3>
+            <p>
+              Branding, social media, content, websites, SEO, and AIO support for businesses that
+              want stronger visibility and better results.
+            </p>
+            <a class="btn btn-gold" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+              Visit Elettro.com
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container intro-block">
+        <div class="copy-card">
+          <h2>Useful help for life in Manhattan</h2>
+          <p>
+            Living in Manhattan creates constant needs. Cleaning. Moving help. Furniture assembly.
+            Dog walking. Pet sitting. Building issues. City questions.
+          </p>
+          <p>
+            ManhattanServices.com is a simple place to start. We focus on the categories people
+            look for most. We keep it clear. We keep it useful. We help you get pointed in the
+            right direction faster.
+          </p>
+        </div>
+
+        <div class="stats-card">
+          <h3>What this site helps with</h3>
+          <div class="stats-list">
+            <div class="stat-item">
+              <span class="stat-label">Apartment living</span>
+              <span class="stat-value">Cleaning, moving, repairs, mounting, and assembly</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Pet owner needs</span>
+              <span class="stat-value">Dog walking, pet sitting, visits, and routine support</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">City issue guidance</span>
+              <span class="stat-value">Building issues, complaints, and next-step direction</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Business growth</span>
+              <span class="stat-value">Branding, content, websites, SEO, social media, and AIO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <h2>Popular services</h2>
+            <p>
+              Start with the categories people in Manhattan need most often.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card">
+            <h3>Apartment Services</h3>
+            <p>
+              Find help with cleaning, moving, handyman work, furniture assembly, TV mounting, art
+              hanging, and common apartment-related needs.
+            </p>
+            <a class="btn btn-dark" href="#apartment-section">View Apartment Services</a>
+          </article>
+
+          <article class="feature-card" id="pets">
+            <h3>Pet Services</h3>
+            <p>
+              Find dog walking, pet sitting, drop-in visits, cat care, and support for busy
+              Manhattan pet owners.
+            </p>
+            <a class="btn btn-dark" href="#pet-section">View Pet Services</a>
+          </article>
+
+          <article class="feature-card" id="city-help">
+            <h3>City Help</h3>
+            <p>
+              Need help figuring out a building issue, heat or hot water complaint, noise issue, or
+              city-related problem? Start here.
+            </p>
+            <a class="btn btn-dark" href="#city-section">View City Help</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cta-band">
+        <div>
+          <h2>Need help marketing your Manhattan business?</h2>
+          <p>
+            We help with branding, websites, content, SEO, social media, and AIO for Manhattan
+            businesses that want better visibility and better results.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-gold" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+            Request Marketing Help
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="apartment-section">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <h2>Apartment life moves fast. Your service search should too.</h2>
+            <p>
+              You should not need to search ten different places to figure out what to do next.
+            </p>
+          </div>
+        </div>
+
+        <div class="three-col">
+          <div class="grid-card">
+            <h3>Apartment Services</h3>
+            <p>
+              Cleaning, moving help, heavy lifting, furniture assembly, TV mounting, art hanging,
+              handyman fixes, and other practical apartment-related needs.
+            </p>
+          </div>
+
+          <div class="grid-card" id="pet-section">
+            <h3>Pet Services</h3>
+            <p>
+              Dog walking, pet sitting, drop-in visits, cat care, and recurring help for workdays,
+              travel, and packed schedules.
+            </p>
+          </div>
+
+          <div class="grid-card" id="city-section">
+            <h3>City Help</h3>
+            <p>
+              Guidance for common local issues including no heat or hot water, apartment
+              maintenance problems, noise complaints, and city issue reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <h2>Who this site is for</h2>
+            <p>
+              Built to serve the people and businesses that keep Manhattan moving.
+            </p>
+          </div>
+        </div>
+
+        <div class="three-col">
+          <div class="grid-card">
+            <h3>Residents and Renters</h3>
+            <p>
+              Find common service categories without wasting time on scattered searches and weak
+              local results.
+            </p>
+          </div>
+
+          <div class="grid-card">
+            <h3>Pet Owners</h3>
+            <p>
+              Find practical help for workdays, travel, apartment routines, and busy schedules.
+            </p>
+          </div>
+
+          <div class="grid-card">
+            <h3>Local Businesses</h3>
+            <p>
+              Get seen more clearly with better branding, better content, stronger websites, and
+              smarter digital visibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <h2>Common Manhattan needs</h2>
+            <p>
+              These are the kinds of services and help people often need in and around Manhattan.
+            </p>
+          </div>
+        </div>
+
+        <div class="needs-grid">
+          <div class="need-item">Cleaning Services</div>
+          <div class="need-item">Moving Help</div>
+          <div class="need-item">Furniture Assembly</div>
+          <div class="need-item">TV and Art Mounting</div>
+          <div class="need-item">Handyman Help</div>
+          <div class="need-item">Dog Walking</div>
+          <div class="need-item">Pet Sitting</div>
+          <div class="need-item">Apartment and City Issue Help</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container business-block">
+        <div>
+          <h2>Own a business in Manhattan?</h2>
+          <p>
+            If your business serves Manhattan, your customers are already searching online. The
+            question is whether they find you, trust what they see, and take action.
+          </p>
+          <p>
+            We help Manhattan businesses improve branding, websites, content, SEO, social media,
+            and AIO so they present better and compete better.
+          </p>
+
+          <div class="business-list" aria-label="Business categories we help">
+            <span>Cleaning Companies</span>
+            <span>Movers</span>
+            <span>Handymen</span>
+            <span>Pet Care Businesses</span>
+            <span>Building Service Vendors</span>
+            <span>Local Service Professionals</span>
+          </div>
+        </div>
+
+        <div class="grid-card">
+          <h3>Do you need marketing, branding, social media, content, website, SEO, or AIO help?</h3>
+          <p>
+            We can help. Visit Elettro to see how we support local brands and service businesses
+            that want stronger presentation and stronger lead flow.
+          </p>
+          <div style="margin-top: 18px;">
+            <a class="btn btn-dark" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+              See Marketing Help
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container final-cta">
+        <div class="final-box">
+          <h3>Do you need help in Manhattan?</h3>
+          <p>
+            Explore apartment services, pet services, and city help from one simple local starting
+            point.
+          </p>
+          <a class="btn btn-dark" href="#services">Explore Services</a>
+        </div>
+
+        <div class="final-box">
+          <h3>Need help growing your Manhattan business?</h3>
+          <p>
+            Branding. Content. Social media. Website development. SEO. AIO. We help businesses
+            compete better online.
+          </p>
+          <a class="btn btn-gold" href="https://Elettro.com" target="_blank" rel="noopener noreferrer">
+            Visit Elettro.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-copy">
+        <strong>ManhattanServices.com</strong>
+        <p>Useful services for life in Manhattan.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Apartment Services</a>
+        <a href="#pets">Pet Services</a>
+        <a href="#city-help">City Help</a>
+        <a href="https://Elettro.com" target="_blank" rel="noopener noreferrer">Marketing Help</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
