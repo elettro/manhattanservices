@@ -620,13 +620,60 @@ section {
 
 
 @media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .header-inner {
+    padding-inline: 16px;
+  }
+
+  main .container {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero-wrap,
+  .intro-block,
+  .cards-grid,
+  .three-col,
+  .needs-grid,
+  .business-block,
+  .final-cta,
+  .page-hero-wrap,
+  .service-grid,
+  .contact-split {
+    gap: 0;
+  }
+
+  .hero-card,
+  .hero-side,
+  .copy-card,
+  .stats-card,
+  .feature-card,
+  .grid-card,
+  .business-block,
+  .final-cta,
+  .final-box,
+  .cta-band,
+  .page-hero-copy,
+  .page-hero-panel,
+  .service-card {
+    border-radius: 0;
+  }
+
+  .page-hero-copy h1 {
+    white-space: normal;
+  }
+
   .site-header {
     backdrop-filter: none;
   }
 
   .header-inner {
     min-height: auto;
-    padding: 10px 0;
+    padding: 10px 16px;
     flex-wrap: wrap;
     position: relative;
   }
