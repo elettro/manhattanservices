@@ -139,6 +139,28 @@
 
         <div class="page-hero-panel">
           <h3>Popular pet service needs</h3>
+          <div class="hero-carousel" data-carousel aria-label="Pet services highlights">
+            <div class="hero-carousel-track">
+            <figure class="hero-slide is-active" data-slide-index="0">
+              <img src="https://source.unsplash.com/1200x700/?manhattan,dog-walking" alt="Dog walker with pets on a Manhattan street" loading="lazy" />
+            </figure>
+            <figure class="hero-slide" data-slide-index="1">
+              <img src="https://source.unsplash.com/1200x700/?cat,apartment,new-york" alt="Cat relaxing by a Manhattan apartment window" loading="lazy" />
+            </figure>
+            <figure class="hero-slide" data-slide-index="2">
+              <img src="https://source.unsplash.com/1200x700/?pet-grooming,nyc" alt="Pet grooming service in New York City" loading="lazy" />
+            </figure>
+            </div>
+            <div class="hero-carousel-controls">
+              <button type="button" class="hero-carousel-btn" data-carousel-prev aria-label="Previous slide">&#8592;</button>
+              <div class="hero-carousel-dots">
+              <button type="button" class="hero-carousel-dot is-active" data-carousel-dot="0" aria-label="Go to slide 1"></button>
+              <button type="button" class="hero-carousel-dot" data-carousel-dot="1" aria-label="Go to slide 2"></button>
+              <button type="button" class="hero-carousel-dot" data-carousel-dot="2" aria-label="Go to slide 3"></button>
+              </div>
+              <button type="button" class="hero-carousel-btn" data-carousel-next aria-label="Next slide">&#8594;</button>
+            </div>
+          </div>
           <div class="icon-check-list">
             <div><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 14c0-3.3 2.7-6 6-6s6 2.7 6 6M7 14v3m10-3v3M6 20h12" /></svg></span><span>Dog Walking</span></div>
             <div><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 8v-2a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v2" /></svg></span><span>Pet Sitting</span></div>
@@ -413,5 +435,6 @@
   </footer>
 
   <script src="../js/header-menu.js" defer></script>
+  <script src="../js/hero-carousel.js" defer></script>
 </body>
 </html>
