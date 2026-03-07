@@ -673,8 +673,9 @@ section {
 }
 
 .page-hero-copy h1 {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  max-width: none;
+  white-space: nowrap;
 }
 
 .page-lead {
@@ -739,6 +740,10 @@ section {
   .page-hero-panel,
   .service-card {
     padding: 24px;
+  }
+
+  .page-hero-copy h1 {
+    white-space: normal;
   }
 
   .service-grid {
