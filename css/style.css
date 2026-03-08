@@ -890,12 +890,14 @@ section {
 }
 
 
+.image-carousel-shell,
 .hero-carousel {
   display: grid;
   gap: 14px;
   margin-bottom: 22px;
 }
 
+.image-carousel-media,
 .hero-carousel-track {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -903,6 +905,14 @@ section {
   overflow: hidden;
   background: var(--surface-soft);
   border: 1px solid var(--line);
+}
+
+.image-carousel-media img,
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-slide {
@@ -917,13 +927,6 @@ section {
 .hero-slide.is-active {
   opacity: 1;
   visibility: visible;
-}
-
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .hero-carousel-controls {
@@ -997,17 +1000,21 @@ section {
   color: var(--muted);
 }
 
-.apartment-living-gallery {
-  padding-top: 6px;
+.image-carousel-section {
+  padding: 34px 0;
 }
 
-.apartment-gallery-track {
+.image-carousel-header {
+  margin-bottom: 22px;
+}
+
+.image-carousel-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
-.apartment-gallery-card {
+.image-carousel-card {
   margin: 0;
   background: var(--surface);
   border-radius: var(--radius);
@@ -1016,14 +1023,7 @@ section {
   overflow: hidden;
 }
 
-.apartment-gallery-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  display: block;
-}
-
-.apartment-gallery-card figcaption {
+.image-carousel-caption {
   padding: 14px 16px 16px;
   color: var(--muted);
   font-size: 0.95rem;
@@ -1031,23 +1031,14 @@ section {
 }
 
 @media (max-width: 1100px) {
-  .apartment-gallery-track {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(300px, 1fr);
-    grid-template-columns: none;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scroll-snap-type: x proximity;
-  }
-
-  .apartment-gallery-card {
-    scroll-snap-align: start;
+  .image-carousel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 760px) {
-  .apartment-gallery-track {
-    grid-auto-columns: minmax(82%, 1fr);
+  .image-carousel-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 }
