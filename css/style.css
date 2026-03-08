@@ -1035,7 +1035,7 @@ section {
 
 @media (min-width: 1101px) {
   .contact-page-hero .contact-hero-wrap {
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: 1.14fr 0.86fr;
   }
 
   .contact-page-hero .page-hero-copy {
@@ -1043,10 +1043,20 @@ section {
   }
 
   .contact-page-hero .contact-hero-title {
-    max-width: 12ch;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    font-size: clamp(2.25rem, 3.4vw, 3.6rem);
+    max-width: 18ch;
     line-height: 1.03;
+  }
+
+  .contact-page-hero .contact-hero-brand {
+    white-space: nowrap;
+  }
+
+  .contact-page-hero .page-hero-panel {
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    padding-right: 30px;
   }
 
   .contact-page-hero .page-hero-panel .icon-check-list div {
