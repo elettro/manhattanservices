@@ -889,7 +889,7 @@ section {
 
 .hero-carousel-track {
   position: relative;
-  min-height: 280px;
+  aspect-ratio: 16 / 9;
   border-radius: 18px;
   overflow: hidden;
   background: var(--surface-soft);
@@ -1010,10 +1010,6 @@ section {
   .page-hero-panel,
   .service-card {
     padding: 24px;
-  }
-
-  .hero-carousel-track {
-    min-height: 220px;
   }
 
   .page-hero-copy h1 {
