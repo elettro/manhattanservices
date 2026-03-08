@@ -997,6 +997,61 @@ section {
   color: var(--muted);
 }
 
+.apartment-living-gallery {
+  padding-top: 6px;
+}
+
+.apartment-gallery-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.apartment-gallery-card {
+  margin: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(18, 18, 18, 0.05);
+  overflow: hidden;
+}
+
+.apartment-gallery-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.apartment-gallery-card figcaption {
+  padding: 14px 16px 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 1100px) {
+  .apartment-gallery-track {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(300px, 1fr);
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+  }
+
+  .apartment-gallery-card {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .apartment-gallery-track {
+    grid-auto-columns: minmax(82%, 1fr);
+    gap: 16px;
+  }
+}
+
 @media (min-width: 1101px) {
   .page-hero-panel .hero-carousel {
     display: none;
@@ -1035,7 +1090,7 @@ section {
 
 @media (min-width: 1101px) {
   .contact-page-hero .contact-hero-wrap {
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: 1.14fr 0.86fr;
   }
 
   .contact-page-hero .page-hero-copy {
@@ -1043,10 +1098,20 @@ section {
   }
 
   .contact-page-hero .contact-hero-title {
-    max-width: 12ch;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    font-size: clamp(2.25rem, 3.4vw, 3.6rem);
+    max-width: 18ch;
     line-height: 1.03;
+  }
+
+  .contact-page-hero .contact-hero-brand {
+    white-space: nowrap;
+  }
+
+  .contact-page-hero .page-hero-panel {
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    padding-right: 30px;
   }
 
   .contact-page-hero .page-hero-panel .icon-check-list div {
