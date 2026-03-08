@@ -1033,6 +1033,28 @@ section {
 
 
 
+@media (min-width: 1101px) {
+  .contact-page-hero .contact-hero-wrap {
+    grid-template-columns: 1.08fr 0.92fr;
+  }
+
+  .contact-page-hero .page-hero-copy {
+    overflow: hidden;
+  }
+
+  .contact-page-hero .contact-hero-title {
+    max-width: 12ch;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.03;
+  }
+
+  .contact-page-hero .page-hero-panel .icon-check-list div {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
 .contact-split {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
