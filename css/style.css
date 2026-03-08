@@ -627,6 +627,11 @@ section {
 
   .header-inner {
     padding-inline: 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 8px;
   }
 
   main .container {
@@ -674,13 +679,18 @@ section {
   .header-inner {
     min-height: auto;
     padding: 10px 16px;
-    flex-wrap: wrap;
     position: relative;
   }
 
   .brand {
     font-size: 0.92rem;
     gap: 10px;
+    min-width: 0;
+  }
+
+  .brand span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-mark {
@@ -698,7 +708,7 @@ section {
   .main-nav {
     display: flex;
     width: 100%;
-    order: 3;
+    grid-column: 1 / -1;
     justify-content: flex-start;
     gap: 14px;
     padding: 8px 0 6px;
@@ -879,7 +889,7 @@ section {
 
 .hero-carousel-track {
   position: relative;
-  min-height: 280px;
+  aspect-ratio: 16 / 9;
   border-radius: 18px;
   overflow: hidden;
   background: var(--surface-soft);
@@ -1000,10 +1010,6 @@ section {
   .page-hero-panel,
   .service-card {
     padding: 24px;
-  }
-
-  .hero-carousel-track {
-    min-height: 220px;
   }
 
   .page-hero-copy h1 {
