@@ -1478,3 +1478,39 @@ section {
     height: 2.2rem;
   }
 }
+
+@media (max-width: 1024px) {
+  .classic-carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
+    scroll-snap-stop: always;
+  }
+
+  .classic-carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .classic-carousel-slide {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .classic-carousel-input:nth-of-type(1):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(2):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(3):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(4):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(5):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(6):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(7):checked ~ .classic-carousel-track,
+  .classic-carousel-input:nth-of-type(8):checked ~ .classic-carousel-track {
+    transform: none;
+  }
+}
