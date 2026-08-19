@@ -1,0 +1,8 @@
+{
+  "name": "manhattanservices-static-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node scripts/audit-site.mjs"
+  }
+}
